@@ -1,0 +1,19 @@
+.wiki {
+  margin: auto;
+  background: whitesmoke;
+  box-shadow: 0 0 10px 2px #333333;
+}
+.wiki ul {
+  color: brown;
+  font-size: large;
+  font-style: italic;
+}
+
+.wiki ol {
+  color: brown;
+  font-size: large;
+  font-style: italic;
+}
+.wiki p {
+  font-style: oblique;
+}
