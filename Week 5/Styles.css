@@ -34,7 +34,7 @@ footer {
 }
 
 table {
-  border: red 2px solid;
+  border: black 2px solid;
   border-collapse: collapse;
   width: 100px;
 }
