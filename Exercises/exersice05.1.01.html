@@ -2,6 +2,24 @@
 <html lang="en">
   <head>
     <title>My first table</title>
+    <style>
+      table {
+        width: 50%;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      th {
+        background-color: blue;
+        color: blanchedalmond;
+      }
+      tr:hover {
+        background-color: blanchedalmond;
+      }
+      .zero {
+        background-color: black;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <h3>My first table</h3>
@@ -27,7 +45,7 @@
         <tr>
           <td>JavaScript</td>
           <td>Hard</td>
-          <td>Zero</td>
+          <td class="zero">Zero</td>
         </tr>
       </tbody>
     </table>
