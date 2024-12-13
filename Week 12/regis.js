@@ -1,41 +1,71 @@
 document
   .getElementById("registrationForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
-
-    // Clear previous error messages
-    document.getElementById("usernameError").textContent = "";
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("passwordError").textContent = "";
+    event.preventDefault();
 
     let isValid = true;
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const phone = document.getElementById("phone");
+    const successMessage = document.querySelector(".success-message");
 
-    // Validate Username
-    const username = document.getElementById("username").value;
-    if (username.length < 3) {
+    // Clear previous errors
+    document
+      .querySelectorAll(".error-message")
+      .forEach((msg) => (msg.textContent = ""));
+    document
+      .querySelectorAll("input")
+      .forEach((input) => input.classList.remove("error"));
+
+    // Username validation
+    if (username.value.trim().length < 3) {
+      setError(username, "Username must be at least 3 characters long");
       isValid = false;
-      document.getElementById("usernameError").textContent =
-        "Username must be at least 3 characters long.";
     }
 
-    // Validate Email
-    const email = document.getElementById("email").value;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
+    // Email validation
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email.value.trim())) {
+      setError(email, "Please enter a valid email address");
       isValid = false;
-      document.getElementById("emailError").textContent =
-        "Please enter a valid email address.";
-    }
-    // Validate Password
-    const password = document.getElementById("password").value;
-    if (password.length < 6) {
-      isValid = false;
-      document.getElementById("passwordError").textContent =
-        "Password must be at least 6 characters long.";
     }
 
+    // Password validation
+    const passwordPattern =
+      /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+    if (!passwordPattern.test(password.value.trim())) {
+      setError(
+        password,
+        "Password must be at least 8 characters long and contain at least one number and one special character"
+      );
+      isValid = false;
+    }
+
+    // Confirm password validation
+    if (password.value.trim() !== confirmPassword.value.trim()) {
+      setError(confirmPassword, "Passwords do not match");
+      isValid = false;
+    }
+
+    // Phone number validation
+    const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+    if (!phonePattern.test(phone.value.trim())) {
+      setError(phone, "Please enter a valid phone number (e.g., XXX-XXX-XXXX)");
+      isValid = false;
+    }
+
+    // Show success message if valid
     if (isValid) {
-      alert("Registration successful!");
-      // Here you can proceed with form submission or further processing
+      successMessage.style.display = "block";
+    } else {
+      successMessage.style.display = "none";
     }
   });
+
+function setError(element, message) {
+  const errorMessage = element.nextElementSibling;
+  element.classList.add("error");
+  errorMessage.textContent = message;
+}
