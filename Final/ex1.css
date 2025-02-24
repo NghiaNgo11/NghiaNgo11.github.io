@@ -1,0 +1,22 @@
+table {
+  width: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+tr:hover {
+  background-color: blanchedalmond;
+}
+button {
+  background-color: rgb(61, 252, 44);
+}
+button.hover {
+  background-color: rgb(107, 226, 107);
+}
