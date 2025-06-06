@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize Set - Cachée avec Amour</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      form {
+        max-width: 600px;
+        margin: 2rem auto;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 1rem;
+        color: #d63384;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-top: 0.5rem;
+      }
+      button {
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #ff85c1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="Logo.png" alt="Cachée avec Amour" />
+          </a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="setgift.html">Set Gifts</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Tự Thiết Kế Set Quà Của Bạn</h1>
+        <p>
+          Hãy cho chúng tôi biết ý tưởng của bạn và Cachée sẽ hiện thực hóa điều
+          đó
+        </p>
+      </div>
+    </section>
+
+    <form>
+      <label for="name">Họ và tên:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="occasion">Dịp tặng:</label>
+      <select id="occasion" name="occasion">
+        <option value="birthday">Sinh nhật</option>
+        <option value="anniversary">Kỷ niệm</option>
+        <option value="wedding">Đám cưới</option>
+        <option value="graduation">Tốt nghiệp</option>
+        <option value="other">Khác</option>
+      </select>
+
+      <label for="style">Phong cách mong muốn:</label>
+      <input
+        type="text"
+        id="style"
+        name="style"
+        placeholder="VD: ngọt ngào, tối giản, vintage..."
+      />
+
+      <label for="items">Bạn muốn có trong set quà:</label>
+      <textarea
+        id="items"
+        name="items"
+        rows="4"
+        placeholder="VD: vòng tay, nến thơm, thiệp tay viết, charm..."
+        required
+      ></textarea>
+
+      <label for="note">Ghi chú thêm (nếu có):</label>
+      <textarea id="note" name="note" rows="3"></textarea>
+
+      <button type="submit">Gửi yêu cầu</button>
+    </form>
+
+    <footer>
+      <p>&copy; 2025 Cachée avec Amour. All rights reserved.</p>
+      <div style="margin-top: 1rem">
+        <a
+          href="https://www.facebook.com/share/1EoWQutKo7/?mibextid=wwXIfr"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Facebook.png" alt="Facebook" style="width: 24px" />
+        </a>
+        <a
+          href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40dear.cachee_withluv%3F_t%3DZS-8wz8ZpF9jM2%26_r%3D1%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExckliWGd0QmhqQzg1YjVqcQEeiaSr1FgCaPJoEQ_-vut5L-LGX-PM22HVBY7lGZRrnaN4pZ3541-BHvYa_1c_aem_OpWx4rODsuf1eMyOKAYrzw&h=AT1JIbIqlyHVJHXygNic75tua4f3gLdPdy6xxB3I--AkKWtPn1UpjaQFuLtgTMQotkVP5wu0zzSBJWtk4QHNN8tqCWqs3i1JrBQCVm8rbjbxOM5iDf-GhyvTGOJfplvfW7UNPw"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Tiktok.png" alt="TikTok" style="width: 24px" />
+        </a>
+        <a
+          href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fcacheess._%3Figsh%3DMWl6cnk2d3N1dGt4bw%253D%253D%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExckliWGd0QmhqQzg1YjVqcQEeUAx9Cm-omAz7InC7PqSc2qRN4QR6ImDmbP-TzUxTHhbtOOtnpDk1mXpwTWg_aem_Q-5w0Ok6ZjAee2-GVlJtkQ&h=AT1JIbIqlyHVJHXygNic75tua4f3gLdPdy6xxB3I--AkKWtPn1UpjaQFuLtgTMQotkVP5wu0zzSBJWtk4QHNN8tqCWqs3i1JrBQCVm8rbjbxOM5iDf-GhyvTGOJfplvfW7UNPw"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Instagram.png" alt="Instagram" style="width: 24px" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

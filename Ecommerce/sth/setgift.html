@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Gift - Cachée avec Amour</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .tab-button {
+        padding: 0.75rem 1.5rem;
+        margin: 0.5rem;
+        border: none;
+        background-color: #ffb6c1;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .tab-button:hover,
+      .tab-button.active {
+        background-color: #ff69b4;
+      }
+      .tab-content {
+        display: none;
+        padding: 2rem 1rem;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .set-buttons button {
+        margin: 0.3rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid #ff69b4;
+        background-color: white;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .set-section {
+        display: none;
+        margin-top: 1rem;
+      }
+      .set-section.active {
+        display: block;
+      }
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+      .product-card {
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .product-card:hover {
+        transform: scale(1.02);
+      }
+      .product-card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .product-description {
+        display: none;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Logo.png" alt="Cachée avec Amour"
+          /></a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="setgift.html">Set Gifts</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Set Gifts</h1>
+        <p>Chọn lựa set quà phù hợp hoặc khám phá bất ngờ cùng Blind Box</p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div style="text-align: center">
+        <button class="tab-button active" data-tab="curated">
+          Curated Set
+        </button>
+        <button class="tab-button" data-tab="blindbox">Blind Box</button>
+      </div>
+
+      <div id="curated" class="tab-content active">
+        <h2 style="text-align: center">Curated Sets</h2>
+        <div class="set-buttons" style="text-align: center">
+          <button data-set="lover">Lover Gift Set</button>
+          <button data-set="anniversary">Anniversary</button>
+          <button data-set="wedding">Wedding</button>
+          <button data-set="seasoning">Seasoning</button>
+          <button data-set="graduation">Graduation</button>
+          <button data-set="friendship">Friendship Set</button>
+          <button data-set="children">Children</button>
+          <button data-set="life">Slide of Life</button>
+        </div>
+
+        <div id="lover" class="set-section active">
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/lover1.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+            <div class="product-card">
+              <img src="images/lover2.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+          </div>
+        </div>
+        <div id="anniversary" class="set-section">
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/lover1.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+            <div class="product-card">
+              <img src="images/lover2.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+          </div>
+        </div>
+        <div id="wedding" class="set-section">
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/lover1.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+            <div class="product-card">
+              <img src="images/lover2.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+          </div>
+        </div>
+        <div id="seasoning" class="set-section">
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/lover1.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+            <div class="product-card">
+              <img src="images/lover2.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+          </div>
+        </div>
+        <div id="graduation" class="set-section">
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/lover1.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+            <div class="product-card">
+              <img src="images/lover2.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+          </div>
+        </div>
+        <div id="friendship" class="set-section">
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/lover1.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+            <div class="product-card">
+              <img src="images/lover2.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+          </div>
+        </div>
+        <div id="children" class="set-section">
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/lover1.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+            <div class="product-card">
+              <img src="images/lover2.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+          </div>
+        </div>
+        <div id="life" class="set-section">
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images/lover1.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+            <div class="product-card">
+              <img src="images/lover2.jpg" alt="" />
+              <h4>Sản phẩm 1</h4>
+              <p>₫199,000</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 2rem">
+          <a href="customize.html" class="btn">Customize your own set</a>
+        </p>
+      </div>
+
+      <div id="blindbox" class="tab-content">
+        <h2 style="text-align: center">Blind Box</h2>
+        <div class="product-grid">
+          <div class="product-card" onclick="toggleDescription(this)">
+            <img src="images/bb1.jpg" alt="" />
+            <h4>Sản phẩm 1</h4>
+            <p>₫199,000</p>
+            <div class="product-description">Mô tả chi tiết sản phẩm 1...</div>
+          </div>
+          <div class="product-card" onclick="toggleDescription(this)">
+            <img src="images/bb2.jpg" alt="" />
+            <h4>Sản phẩm 2</h4>
+            <p>₫220,000</p>
+            <div class="product-description">Mô tả chi tiết sản phẩm 2...</div>
+          </div>
+          <div class="product-card" onclick="toggleDescription(this)">
+            <img src="images/bb3.jpg" alt="" />
+            <h4>Sản phẩm 3</h4>
+            <p>₫180,000</p>
+            <div class="product-description">Mô tả chi tiết sản phẩm 3...</div>
+          </div>
+          <div class="product-card" onclick="toggleDescription(this)">
+            <img src="images/bb4.jpg" alt="" />
+            <h4>Sản phẩm 4</h4>
+            <p>₫160,000</p>
+            <div class="product-description">Mô tả chi tiết sản phẩm 4...</div>
+          </div>
+          <div class="product-card" onclick="toggleDescription(this)">
+            <img src="images/bb5.jpg" alt="" />
+            <h4>Sản phẩm 5</h4>
+            <p>₫250,000</p>
+            <div class="product-description">Mô tả chi tiết sản phẩm 5...</div>
+          </div>
+          <div class="product-card" onclick="toggleDescription(this)">
+            <img src="images/bb6.jpg" alt="" />
+            <h4>Sản phẩm 6</h4>
+            <p>₫300,000</p>
+            <div class="product-description">Mô tả chi tiết sản phẩm 6...</div>
+          </div>
+          <div class="product-card" onclick="toggleDescription(this)">
+            <img src="images/bb7.jpg" alt="" />
+            <h4>Sản phẩm 7</h4>
+            <p>₫210,000</p>
+            <div class="product-description">Mô tả chi tiết sản phẩm 7...</div>
+          </div>
+          <div class="product-card" onclick="toggleDescription(this)">
+            <img src="images/bb8.jpg" alt="" />
+            <h4>Sản phẩm 8</h4>
+            <p>₫230,000</p>
+            <div class="product-description">Mô tả chi tiết sản phẩm 8...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer><p>&copy; 2025 Cachée avec Amour. All rights reserved.</p>
+    <div style="margin-top: 1rem">
+        <a
+          href="https://www.facebook.com/share/1EoWQutKo7/?mibextid=wwXIfr"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Facebook.png" alt="Facebook" style="width: 24px" />
+        </a>
+        <a
+          href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40dear.cachee_withluv%3F_t%3DZS-8wz8ZpF9jM2%26_r%3D1%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExckliWGd0QmhqQzg1YjVqcQEeiaSr1FgCaPJoEQ_-vut5L-LGX-PM22HVBY7lGZRrnaN4pZ3541-BHvYa_1c_aem_OpWx4rODsuf1eMyOKAYrzw&h=AT1JIbIqlyHVJHXygNic75tua4f3gLdPdy6xxB3I--AkKWtPn1UpjaQFuLtgTMQotkVP5wu0zzSBJWtk4QHNN8tqCWqs3i1JrBQCVm8rbjbxOM5iDf-GhyvTGOJfplvfW7UNPw"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Tiktok.png" alt="TikTok" style="width: 24px" />
+        </a>
+        <a
+          href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fcacheess._%3Figsh%3DMWl6cnk2d3N1dGt4bw%253D%253D%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExckliWGd0QmhqQzg1YjVqcQEeUAx9Cm-omAz7InC7PqSc2qRN4QR6ImDmbP-TzUxTHhbtOOtnpDk1mXpwTWg_aem_Q-5w0Ok6ZjAee2-GVlJtkQ&h=AT1JIbIqlyHVJHXygNic75tua4f3gLdPdy6xxB3I--AkKWtPn1UpjaQFuLtgTMQotkVP5wu0zzSBJWtk4QHNN8tqCWqs3i1JrBQCVm8rbjbxOM5iDf-GhyvTGOJfplvfW7UNPw"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Instagram.png" alt="Instagram" style="width: 24px" />
+        </a>
+      </div></footer>
+    <script>
+      document.querySelectorAll(".tab-button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-button")
+            .forEach((b) => b.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-content")
+            .forEach((c) => c.classList.remove("active"));
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.tab).classList.add("active");
+        });
+      });
+      document.querySelectorAll(".set-buttons button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".set-section")
+            .forEach((s) => s.classList.remove("active"));
+          document.getElementById(btn.dataset.set).classList.add("active");
+        });
+      });
+      function toggleDescription(card) {
+        const desc = card.querySelector(".product-description");
+        desc.style.display = desc.style.display === "block" ? "none" : "block";
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

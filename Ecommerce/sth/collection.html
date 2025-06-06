@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bộ sưu tập - Cachée avec Amour</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+      .tab-button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        background-color: #ffb6c1;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .tab-button:hover,
+      .tab-button.active {
+        background-color: #ff69b4;
+      }
+      .tab-content {
+        display: none;
+        padding: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .tab-content.active {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+      .product-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+        padding: 1rem;
+        text-align: center;
+      }
+      .product-card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="Logo.png" alt="Cachée avec Amour" />
+          </a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="setgift.html">Set Gifts</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Our collection</h1>
+        <p>Chọn lựa set quà phù hợp hoặc khám phá bất ngờ cùng Blind Box</p>
+      </div>
+    </section>
+    <section>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="Accessories">
+          Accessories
+        </button>
+        <button class="tab-button" data-tab="Decoration">Decoration</button>
+        <button class="tab-button" data-tab="Food">Food</button>
+        <button class="tab-button" data-tab="Stationery">Stationery</button>
+      </div>
+
+      <div id="Accessories" class="tab-content active">
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed.png" alt="Category Product" />
+          <p>Nhẫn handmade</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed1.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed2.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed3.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed4.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed5.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed6.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed7.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed8.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed9.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Accessories\unnamed10.png" alt="Category Product" />
+          <p>Bông tai ngọc</p>
+        </div>
+      </div>
+
+      <div id="Decoration" class="tab-content">
+        <div class="product-card">
+          <img src="Images\Decor\Decor.png" alt="Set Gift" />
+          <p>Set quà sinh nhật</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Decor\Decor1.png" alt="Set Gift" />
+          <p>Set thư tình & charm</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Decor\Decor2.png" alt="Set Gift" />
+          <p>Set thư tình & charm</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Decor\Decor3.png" alt="Set Gift" />
+          <p>Set thư tình & charm</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Decor\Decor4.png" alt="Set Gift" />
+          <p>Set thư tình & charm</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Decor\Decor5.png" alt="Set Gift" />
+          <p>Set thư tình & charm</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Decor\Decor6.png" alt="Set Gift" />
+          <p>Set thư tình & charm</p>
+        </div>
+      </div>
+
+      <div id="Food" class="tab-content">
+        <div class="product-card">
+          <img src="Images\Food\Food.png" alt="Service" />
+          <p>Dịch vụ gói quà cá nhân hóa</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Food\Food2.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Food\Food1.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Food\Food3.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+      </div>
+
+      <div id="Stationery" class="tab-content">
+        <div class="product-card">
+          <img src="Images\Stationery\Sta.png" alt="Service" />
+          <p>Dịch vụ gói quà cá nhân hóa</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta1.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta2.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta3.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta4.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta5.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta6.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta7.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta8.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta9.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta10.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+        <div class="product-card">
+          <img src="Images\Stationery\Sta11.png" alt="Service" />
+          <p>Gửi quà bất ngờ tận nơi</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p
+        style="
+          text-align: center;
+          padding: 1rem;
+          background: #ffc0cb;
+          color: white;
+        "
+      >
+        &copy; 2025 Cachée avec Amour. All rights reserved.
+      </p>
+      <div style="margin-top: 1rem">
+        <a
+          href="https://www.facebook.com/share/1EoWQutKo7/?mibextid=wwXIfr"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Facebook.png" alt="Facebook" style="width: 24px" />
+        </a>
+        <a
+          href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40dear.cachee_withluv%3F_t%3DZS-8wz8ZpF9jM2%26_r%3D1%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExckliWGd0QmhqQzg1YjVqcQEeiaSr1FgCaPJoEQ_-vut5L-LGX-PM22HVBY7lGZRrnaN4pZ3541-BHvYa_1c_aem_OpWx4rODsuf1eMyOKAYrzw&h=AT1JIbIqlyHVJHXygNic75tua4f3gLdPdy6xxB3I--AkKWtPn1UpjaQFuLtgTMQotkVP5wu0zzSBJWtk4QHNN8tqCWqs3i1JrBQCVm8rbjbxOM5iDf-GhyvTGOJfplvfW7UNPw"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Tiktok.png" alt="TikTok" style="width: 24px" />
+        </a>
+        <a
+          href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fcacheess._%3Figsh%3DMWl6cnk2d3N1dGt4bw%253D%253D%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExckliWGd0QmhqQzg1YjVqcQEeUAx9Cm-omAz7InC7PqSc2qRN4QR6ImDmbP-TzUxTHhbtOOtnpDk1mXpwTWg_aem_Q-5w0Ok6ZjAee2-GVlJtkQ&h=AT1JIbIqlyHVJHXygNic75tua4f3gLdPdy6xxB3I--AkKWtPn1UpjaQFuLtgTMQotkVP5wu0zzSBJWtk4QHNN8tqCWqs3i1JrBQCVm8rbjbxOM5iDf-GhyvTGOJfplvfW7UNPw"
+          target="_blank"
+          style="margin: 0 10px"
+        >
+          <img src="Images/Instagram.png" alt="Instagram" style="width: 24px" />
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const buttons = document.querySelectorAll(".tab-button");
+      const tabs = document.querySelectorAll(".tab-content");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          tabs.forEach((tab) => tab.classList.remove("active"));
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
