@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng - Cachée avec Amour</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .cart-section {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .cart-section h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #d63384;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+      }
+      .cart-item p {
+        margin: 0;
+      }
+      .cart-total {
+        text-align: right;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+      .checkout-btn {
+        margin-top: 1rem;
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      .checkout-btn:hover {
+        background-color: #ff85c1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="Logo.png" alt="Cachée avec Amour" style="height: 80px" />
+          </a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="setgift.html">Set Gifts</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="cart.html">🛒</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      </nav>
+    </header>
+
+    <section class="cart-section">
+      <h2>Your cart</h2>
+      <div id="cart-items">
+        <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+      </div>
+      <p class="cart-total">Total: ₫<span id="cart-total">0</span></p>
+      <button class="checkout-btn" onclick="checkout()">Order Now</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Cachée avec Amour. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function renderCart() {
+        const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        const container = document.getElementById("cart-items");
+        const totalDisplay = document.getElementById("cart-total");
+        container.innerHTML = "";
+        let total = 0;
+        cartItems.forEach((item) => {
+          const itemEl = document.createElement("div");
+          itemEl.className = "cart-item";
+          itemEl.innerHTML = `<p>${item.name} x ${item.quantity}</p><p>₫${
+            item.price * item.quantity
+          }</p>`;
+          container.appendChild(itemEl);
+          total += item.price * item.quantity;
+        });
+        totalDisplay.textContent = total.toLocaleString();
+      }
+
+      function checkout() {
+        alert("Thank you for your order! We will contact you soon.");
+        localStorage.removeItem("cart");
+        renderCart();
+      }
+
+      document.addEventListener("DOMContentLoaded", renderCart);
+    </script>
+  </body>
+</html>
